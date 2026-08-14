@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PrepDesk — CS &amp; Aptitude Practice</title>
+<meta name="description" content="Interactive subject-wise practice for DBMS, OOPS, OS, SQL, CN, DSA, and aptitude — quiz mode and study mode with full explanations.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <div class="brand" onclick="goHome()">
+      <div class="brand-mark">PD</div>
+      <div class="brand-text">PrepDesk<small>Tilak's Practice Hub</small></div>
+    </div>
+    <div class="header-actions">
+      <span class="stat-chip" id="hero-stat-mini">loading…</span>
+      <button class="icon-btn" id="theme-toggle" title="Toggle theme">&#9788;</button>
+      <a class="icon-btn" href="https://github.com/tilakygupta" target="_blank" rel="noopener" title="GitHub">&#8734;</a>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ HOME VIEW ============ -->
+  <section id="view-home" class="view active">
+    <div class="hero">
+      <span class="hero-eyebrow">400 Questions · 11 Subjects</span>
+      <h1>Practice like it's <span>exam day</span>.</h1>
+      <p id="hero-stat">Loading question bank…</p>
+      <div class="omr-strip" id="omr-strip"></div>
+      <div class="search-bar">
+        <span class="icon">&#9906;</span>
+        <input type="text" id="search-input" placeholder="Search any question or topic…" autocomplete="off">
+        <div class="search-results" id="search-results"></div>
+      </div>
+    </div>
+
+    <div class="section-label">All Subjects</div>
+    <div class="grid" id="subject-grid"></div>
+  </section>
+
+  <!-- ============ SUBJECT DETAIL VIEW ============ -->
+  <section id="view-subject" class="view">
+    <div id="subject-detail"></div>
+  </section>
+
+  <!-- ============ QUIZ VIEW ============ -->
+  <section id="view-quiz" class="view">
+    <div class="back-link" onclick="goSubject(state.currentSubject.key)">&larr; Back to <span id="quiz-title"></span></div>
+    <div class="quiz-header">
+      <div class="quiz-score" id="quiz-count">Question 1</div>
+      <div class="quiz-score" id="quiz-score">Score: 0 / 0</div>
+    </div>
+    <div class="quiz-progress-track"><div class="quiz-progress-fill" id="quiz-progress-fill" style="width:0%"></div></div>
+
+    <div class="question-card">
+      <div class="q-eyebrow">MULTIPLE CHOICE — select one option</div>
+      <div class="q-text" id="q-text"></div>
+      <div class="options" id="options"></div>
+      <div class="explain-panel" id="explain-panel"></div>
+    </div>
+
+    <div class="quiz-nav">
+      <div></div>
+      <button class="btn btn-primary" id="quiz-next" disabled>Next question →</button>
+    </div>
+  </section>
+
+  <!-- ============ STUDY VIEW ============ -->
+  <section id="view-study" class="view">
+    <div class="back-link" onclick="goSubject(state.currentSubject.key)">&larr; Back to <span id="study-title"></span></div>
+    <div class="flash-wrap">
+      <div class="flashcard" id="flashcard">
+        <div class="fc-eyebrow">TAP CARD TO REVEAL EXPLANATION</div>
+        <div class="fc-question" id="fc-question"></div>
+        <div class="fc-hint">👆 click / tap anywhere on this card</div>
+        <div class="fc-answer-area" id="fc-answer-area"></div>
+      </div>
+    </div>
+    <div class="study-controls">
+      <button class="btn" id="study-prev">← Previous</button>
+      <button class="btn btn-primary" id="study-next">Next card →</button>
+    </div>
+    <div class="study-meta" id="study-meta"></div>
+    <div style="height:60px"></div>
+  </section>
+
+  <!-- ============ RESULTS VIEW ============ -->
+  <section id="view-results" class="view">
+    <div class="results-card">
+      <div class="q-eyebrow">QUIZ COMPLETE</div>
+      <div class="results-score" id="results-score">0/0</div>
+      <div class="results-label" id="results-pct">0% correct</div>
+      <div class="results-actions">
+        <button class="btn btn-primary" id="retry-quiz">Retry this quiz</button>
+        <button class="btn" id="back-home-results">All subjects</button>
+      </div>
+      <div class="review-list" id="review-list"></div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  Built for self-study &middot; data stored locally in your browser &middot; <a href="https://github.com/tilakygupta" target="_blank" rel="noopener">github.com/tilakygupta</a>
+</footer>
+
+<script src="assets/js/app.js"></script>
+</body>
+</html>
