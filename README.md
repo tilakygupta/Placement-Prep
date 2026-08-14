@@ -343,7 +343,7 @@ You may use, modify, and distribute it with appropriate attribution.
 
 ## 👨‍💻 Author
 
-**PrepDesk – CS & Aptitude Practice Hub**
+**PrepDesk – TILAK GUPTA**
 
 A lightweight, browser-based learning platform built to help students strengthen Computer Science fundamentals and aptitude skills through interactive practice, detailed explanations, and self-paced study.
 
