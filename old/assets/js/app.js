@@ -72,13 +72,6 @@ function renderInline(text) {
   return t;
 }
 function renderExplainBody(content) {
-  // fenced code blocks (```sql ... ```) -> <pre><code>
-  if (content.includes('```')) {
-    const parts = content.split(/```[a-zA-Z]*\n?/);
-    return parts.map((part, i) => i % 2 === 1
-      ? `<pre class="code-block"><code>${part.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').trim()}</code></pre>`
-      : (part.trim() ? renderExplainBody(part) : '')).join('');
-  }
   const lines = content.split('\n').map(l => l.trim()).filter(Boolean);
   let html = '';
   let buffer = [];

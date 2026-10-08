@@ -1,0 +1,68 @@
+[
+  {
+    "key": "DBMS",
+    "title": "DBMS",
+    "color": "#7C9EFF",
+    "count": 45
+  },
+  {
+    "key": "OOPS",
+    "title": "OOPS",
+    "color": "#FFC857",
+    "count": 53
+  },
+  {
+    "key": "OS",
+    "title": "Operating Systems",
+    "color": "#4ADE80",
+    "count": 25
+  },
+  {
+    "key": "SQL",
+    "title": "SQL",
+    "color": "#F472B6",
+    "count": 52
+  },
+  {
+    "key": "CN",
+    "title": "Computer Networks",
+    "color": "#60D9C6",
+    "count": 32
+  },
+  {
+    "key": "DSA",
+    "title": "DSA",
+    "color": "#F59E0B",
+    "count": 49
+  },
+  {
+    "key": "ARITHMETIC",
+    "title": "Arithmetic",
+    "color": "#A78BFA",
+    "count": 32
+  },
+  {
+    "key": "PROBABILITY",
+    "title": "Probability",
+    "color": "#38BDF8",
+    "count": 35
+  },
+  {
+    "key": "LOGICAL_REASONING",
+    "title": "Logical Reasoning",
+    "color": "#FB923C",
+    "count": 34
+  },
+  {
+    "key": "VERBAL_ABILITY",
+    "title": "Verbal Ability",
+    "color": "#F87171",
+    "count": 32
+  },
+  {
+    "key": "VERBAL_REASONING",
+    "title": "Verbal Reasoning",
+    "color": "#34D399",
+    "count": 31
+  }
+]
